@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux'; 
+import { Provider } from 'react-redux';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
-import AppRouter from './routers/AppRouter'
+import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
 import { addExpense } from './actions/expenses';
 import getVisibleExpenses from './selectors/visibleExpenses';
@@ -16,7 +16,7 @@ const expenseOne = store.dispatch(addExpense({ description: 'Water bill', amount
 const expenseTwo = store.dispatch(addExpense({ description: 'Gas bill', amount: 500, createdAt: 125}));
 store.dispatch(setTextFilter('bill'));
 
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
 
 console.log(visibleExpenses);
 console.log(store.getState());
