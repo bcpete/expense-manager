@@ -4,7 +4,7 @@ import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
 import moment from 'moment';
 
-test('Should render expense form componenet', () => {
+test('Should render expense form component', () => {
   const wrapper = shallow(<ExpenseForm />);
   expect(wrapper).toMatchSnapshot();
 });
