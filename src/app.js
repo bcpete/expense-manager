@@ -9,7 +9,7 @@ import { startSetExpenses } from './actions/expenses';
 import getVisibleExpenses from './selectors/visibleExpenses';
 import { setTextFilter } from './actions/filters';
 import 'react-dates/lib/css/_datepicker.css';
-import './firebase/firebase';
+import { firebase } from './firebase/firebase';
 
 const store = configureStore();
 const state = store.getState();
@@ -21,6 +21,14 @@ const jsx = (
     <AppRouter />
   </Provider>
 );
+
+firebase.auth().onAuthStateChanged((user) => {
+  if(user) {
+    console.log('log in');
+  } else {
+    console.log('log out');
+  }
+});
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
