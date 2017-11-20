@@ -9,3 +9,4 @@ public/styles.css.map
 public/dist/
 .env.test
 .env.development
+.DS_Store
