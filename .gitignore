@@ -7,4 +7,5 @@ public/bundle.js.map
 public/styles.css
 public/styles.css.map
 public/dist/
-src/firebase
+.env.test
+.env.development
