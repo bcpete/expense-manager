@@ -18,12 +18,12 @@ class ExpenseForm extends React.Component {
 
   onDescriptionChange = (e) => {
     const description = e.target.value;
-    this.setState(() => ({ description }))
+    this.setState(() => ({ description }));
   };
 
   onNoteChange = (e) => {
     const note = e.target.value;
-    this.setState(() => ({ note }))
+    this.setState(() => ({ note }));
   };
 
   onAmountChange = (e) => {
